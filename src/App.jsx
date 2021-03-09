@@ -2,9 +2,14 @@ import React from "react";
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello from React APP</h1>
-    </div>
+    <>
+      <h1>Type'sy</h1>
+      <p>
+        A typing game that something will type when you type... How fast can you
+        type?
+      </p>
+      <p>something else... somet type stuff</p>
+    </>
   );
 };
 
