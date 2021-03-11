@@ -1,4 +1,50 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+textarea {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+button {
+  border-top: 1px solid #ed5cd2;
+  background: #d665ae;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#d451e0),
+    to(#d665ae)
+  );
+  background: -webkit-linear-gradient(top, #d451e0, #d665ae);
+  background: -moz-linear-gradient(top, #d451e0, #d665ae);
+  background: -ms-linear-gradient(top, #d451e0, #d665ae);
+  background: -o-linear-gradient(top, #d451e0, #d665ae);
+  padding: 12px 24px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  vertical-align: middle;
+  font-family: "Poppins", sans-serif;
+}
+.button:hover {
+  border-top-color: #f25ceb;
+  background: #f25ceb;
+  color: #ffffff;
+}
+.button:active {
+  border-top-color: #ed5cd2;
+  background: #ed5cd2;
 }

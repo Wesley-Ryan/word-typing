@@ -52,47 +52,53 @@ const TypingForm = () => {
         justify-content: center;
       `}
     >
-      <h4
+      <div
         css={css`
-          align-self: flex-end;
-          padding: 2%;
+          display: flex;
+          justify-content: space-between;
           font-size: 24px;
         `}
       >
-        Time remaining:{" "}
-        <span style={{ color: timeRemaining < 9 ? "red" : "black" }}>
-          {timeRemaining}
-        </span>
-      </h4>
-      <textarea
-        css={css`
-          width: 90%;
-          height: 350px;
-          margin: 0 auto;
-          border-radius: 10px;
-        `}
-        ref={textBoxRef}
-        onChange={handleChange}
-        value={text}
-        disabled={!isTimeRunning}
-      />
-
+        <h2>Word Count: {wordCount}</h2>
+        <h4
+          css={css`
+            padding: 2%;
+          `}
+        >
+          Time remaining:{" "}
+          <span style={{ color: timeRemaining < 9 ? "red" : "black" }}>
+            {timeRemaining}
+          </span>
+        </h4>
+      </div>
+      <section style={{ margin: "0 auto", width: "100%", display: "flex" }}>
+        <textarea
+          css={css`
+            width: 90%;
+            font-size: 20px;
+            height: 250px;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+            margin: 0 auto;
+          `}
+          ref={textBoxRef}
+          onChange={handleChange}
+          value={text}
+          disabled={!isTimeRunning}
+        />
+      </section>
       <button
         onClick={startGame}
         disabled={isTimeRunning}
         css={css`
           width: 20%;
           padding: 1%;
-          margin: 10px auto;
+          margin: 0 auto;
+          margin-top: 20px;
         `}
       >
         Start
       </button>
-      {timeRemaining === 0 ? (
-        alert(<h1>Word count: {wordCount}</h1>)
-      ) : (
-        <div></div>
-      )}
     </div>
   );
 };
