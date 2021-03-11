@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "./components/Navigation";
+import TypingForm from "./components/TypingForm";
 import "./App.css";
 const App = () => {
   return (
@@ -11,6 +12,8 @@ const App = () => {
         type?
       </p>
       <p>something else... somet type stuff</p>
+
+      <TypingForm />
     </>
   );
 };
