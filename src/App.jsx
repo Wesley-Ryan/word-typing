@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import Welcome from "./components/WelcomeModal";
 import Navigation from "./components/Navigation";
 import TypingForm from "./components/TypingForm";
 import "./App.css";
 const App = () => {
+  const [isModalVisible, setIsModalVisible] = useState(true);
   return (
     <>
       <Navigation />
-      <h1>Type'sy</h1>
-      <p>
-        A typing game that something will type when you type... How fast can you
-        type?
-      </p>
-      <p>something else... somet type stuff</p>
-
-      <TypingForm />
+      <div style={{ padding: "15px" }}>
+        {isModalVisible && (
+          <Welcome
+            isModalVisible={isModalVisible}
+            setIsModalVisible={setIsModalVisible}
+          />
+        )}
+        <TypingForm />
+      </div>
     </>
   );
 };

@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { css, jsx } from "@emotion/react";
 
 const TypingForm = () => {
-  const STARTING_TIME = 20;
+  const STARTING_TIME = 60;
 
   const [text, setText] = useState("");
   const [timeRemaining, setTimeRemaining] = useState(STARTING_TIME);
@@ -59,7 +59,7 @@ const TypingForm = () => {
           font-size: 24px;
         `}
       >
-        <h2>Word Count: {wordCount}</h2>
+        <h2>Score: {wordCount}WPM</h2>
         <h4
           css={css`
             padding: 2%;
@@ -73,6 +73,7 @@ const TypingForm = () => {
       </div>
       <section style={{ margin: "0 auto", width: "100%", display: "flex" }}>
         <textarea
+          className="shadow"
           css={css`
             width: 90%;
             font-size: 20px;
